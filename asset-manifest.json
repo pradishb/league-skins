@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/league-skins/static/css/main.5dbb4e95.chunk.css",
-    "main.js": "/league-skins/static/js/main.ce75e34e.chunk.js",
-    "main.js.map": "/league-skins/static/js/main.ce75e34e.chunk.js.map",
+    "main.css": "/league-skins/static/css/main.27837905.chunk.css",
+    "main.js": "/league-skins/static/js/main.d776cb39.chunk.js",
+    "main.js.map": "/league-skins/static/js/main.d776cb39.chunk.js.map",
     "runtime-main.js": "/league-skins/static/js/runtime-main.9fc88f0b.js",
     "runtime-main.js.map": "/league-skins/static/js/runtime-main.9fc88f0b.js.map",
     "static/js/2.21185c23.chunk.js": "/league-skins/static/js/2.21185c23.chunk.js",
     "static/js/2.21185c23.chunk.js.map": "/league-skins/static/js/2.21185c23.chunk.js.map",
     "index.html": "/league-skins/index.html",
-    "precache-manifest.cd00d9d1462d88f750602233a32dd344.js": "/league-skins/precache-manifest.cd00d9d1462d88f750602233a32dd344.js",
+    "precache-manifest.c34d8ed8d96f02fa15d888c6a88f0b68.js": "/league-skins/precache-manifest.c34d8ed8d96f02fa15d888c6a88f0b68.js",
     "service-worker.js": "/league-skins/service-worker.js",
-    "static/css/main.5dbb4e95.chunk.css.map": "/league-skins/static/css/main.5dbb4e95.chunk.css.map",
+    "static/css/main.27837905.chunk.css.map": "/league-skins/static/css/main.27837905.chunk.css.map",
     "static/js/2.21185c23.chunk.js.LICENSE.txt": "/league-skins/static/js/2.21185c23.chunk.js.LICENSE.txt",
     "static/media/index.css": "/league-skins/static/media/profile.18a1c553.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9fc88f0b.js",
     "static/js/2.21185c23.chunk.js",
-    "static/css/main.5dbb4e95.chunk.css",
-    "static/js/main.ce75e34e.chunk.js"
+    "static/css/main.27837905.chunk.css",
+    "static/js/main.d776cb39.chunk.js"
   ]
 }

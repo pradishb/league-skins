@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dc97a4fade47457300270395f1429d0",
+    "revision": "95f5453ab6ad5e9af79c3a25cc663109",
     "url": "/league-skins/index.html"
   },
   {
-    "revision": "4f3951b8e8fc9d7d1ecd",
-    "url": "/league-skins/static/css/main.5dbb4e95.chunk.css"
+    "revision": "3962112043ff97003774",
+    "url": "/league-skins/static/css/main.27837905.chunk.css"
   },
   {
     "revision": "fa3c8641289c7ca4164d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/league-skins/static/js/2.21185c23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f3951b8e8fc9d7d1ecd",
-    "url": "/league-skins/static/js/main.ce75e34e.chunk.js"
+    "revision": "3962112043ff97003774",
+    "url": "/league-skins/static/js/main.d776cb39.chunk.js"
   },
   {
     "revision": "f6d424476f3437247d28",
