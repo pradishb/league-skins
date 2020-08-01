@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* ---------------------------FONTS-------------------------- */
+
+.sdf-font {
+  font-family: "Roboto", sans-serif;
+}
+
+.sdf-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.sdf-h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.sdf-h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.sdf-h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.sdf-h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.sdf-h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* --------------------------LIGHT AND DARK------------------------------ */
+
+.sdf-dark {
+  color: white;
+}
+
+.sdf-light {
+  color: black;
+}
+
+/* ---------------------------SUBMIT BUTTONS------------------------------- */
+
+.sdf-s-submit {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+  background-color: #e41749;
+  color: white;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 150px;
+}
+
+.sdf-m-submit {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+  background-color: #e41749;
+  color: white;
+  border: none;
+  outline: none;
+  width: 300px;
+  height: 68px;
+  margin: 10px;
+}
+
+.sdf-l-submit {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+  background-color: #e41749;
+  color: white;
+  border: none;
+  outline: none;
+  height: 68px;
+  width: 358px;
+}
+
+/* ----------------------------------INPUT FORM----------------------------- */
+.sdf-form {
+  width: 300px;
+  height: 50px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  border-radius: none;
+  border: 1px solid lightslategray;
+  outline: none;
+  margin: 10px;
+}
+
+.sdf-form-code {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  border-radius: none;
+  border: 1px solid lightslategray;
+  outline: none;
+  margin: 10px;
+}
+
+.sdf-form-search {
+  padding: 10px;
+  min-width: 200px;
+  width: 300px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  outline: none;
+  background-color: whitesmoke;
+  border: none;
+}
+
+/* ---------------------------CARD-------------------- */
+.sdf-card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 400px;
+  background: white;
+}
