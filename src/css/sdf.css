@@ -50,11 +50,11 @@
 
 /* --------------------------LIGHT AND DARK------------------------------ */
 
-.sdf-dark {
+.dark {
   color: white;
 }
 
-.sdf-light {
+.light {
   color: black;
 }
 
@@ -142,7 +142,8 @@
 .sdf-card {
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
+  width: 320px;
   height: 400px;
   background: white;
+  border: 1px solid gray;
 }

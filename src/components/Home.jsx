@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Login() {
+export default function Home() {
   return (
     <div className="container">
       <div className="navbar">
@@ -16,6 +16,12 @@ export default function Login() {
           name="searchbar"
           className="sdf-form-search"
         />
+      </div>
+      <div className="cards-container">
+        <div className="sdf-card"></div>
+        <div className="sdf-card"></div>
+        <div className="sdf-card"></div>
+        <div className="sdf-card"></div>
       </div>
     </div>
   );
