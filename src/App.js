@@ -1,14 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ResetPassword from "./components/ResetPassword";
 import EnterCode from "./components/EnterCode";
+import TopRating from "./components/TopRating";
 
 export default function App() {
   return (
-    <Router>
+    <HashRouter basename="/">
       <div>
         <Switch>
           <Route path="/" exact="true">
@@ -26,8 +27,11 @@ export default function App() {
           <Route path="/entercode">
             <EnterCode />
           </Route>
+          <Route path="/toprating">
+            <TopRating />
+          </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }

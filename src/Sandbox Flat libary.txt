@@ -11,8 +11,8 @@ sdf-h4
 sdf-h5
 sdf-h6
 
-sdf-dark
-sdf-light
+dark
+light
 
 
 sdf-s-submit

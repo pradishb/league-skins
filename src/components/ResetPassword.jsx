@@ -6,13 +6,13 @@ export default function ResetPassword() {
       <p>Reset your password.</p>
       <input type="text" name="form" placeholder="Email" className="sdf-form" />
       <input
-        type="text"
+        type="password"
         name="form"
         placeholder="New Password"
         className="sdf-form"
       />
       <input
-        type="text"
+        type="password"
         name="form"
         placeholder="Confirm Password"
         className="sdf-form"

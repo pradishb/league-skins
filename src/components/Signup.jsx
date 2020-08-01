@@ -6,13 +6,13 @@ export default function Signup() {
       <p>Please sign up to continue.</p>
       <input type="text" name="form" placeholder="Name" className="sdf-form" />
       <input
-        type="text"
+        type="password"
         name="form"
         placeholder="Enter Password"
         className="sdf-form"
       />
       <input
-        type="text"
+        type="password"
         name="form"
         placeholder="Confirm Password"
         className="sdf-form"
