@@ -1,4 +1,16 @@
 import React from "react";
+import CharacterCard from "./CharacterCard";
+import characterdata from "../characterdata";
+
+function createEntry(characterInfo) {
+  return (
+    <CharacterCard
+      key={characterInfo.id}
+      img={characterInfo.img}
+      name={characterInfo.name}
+    />
+  );
+}
 
 export default function Home() {
   return (
@@ -17,12 +29,7 @@ export default function Home() {
           className="sdf-form-search"
         />
       </div>
-      <div className="cards-container">
-        <div className="sdf-card"></div>
-        <div className="sdf-card"></div>
-        <div className="sdf-card"></div>
-        <div className="sdf-card"></div>
-      </div>
+      <div className="cards-container">{characterdata.map(createEntry)}</div>
     </div>
   );
 }

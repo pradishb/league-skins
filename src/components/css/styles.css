@@ -85,6 +85,23 @@ a:hover {
   justify-content: space-between;
 }
 
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 348px;
+  background: white;
+  border: none;
+}
+
+.cname {
+  width: 100%;
+  padding: 15px 20px;
+  font-style: italic;
+  color: white;
+  background-color: black;
+}
+
 /* ------------------------------------------------Top-rating--page-------------------- */
 
 .top-rating-container {

@@ -1,11 +1,11 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import ResetPassword from "./components/ResetPassword";
-import EnterCode from "./components/EnterCode";
-import TopRating from "./components/TopRating";
+import Home from "./Home";
+import Login from "./Login";
+import Signup from "./Signup";
+import ResetPassword from "./ResetPassword";
+import EnterCode from "./EnterCode";
+import TopRating from "./TopRating";
 
 export default function App() {
   return (
