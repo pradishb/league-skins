@@ -101,6 +101,7 @@
   width: 300px;
   height: 68px;
   margin: 10px;
+  border-radius: 10px;
 }
 
 .sdf-l-submit {
@@ -114,6 +115,7 @@
   outline: none;
   height: 68px;
   width: 358px;
+  border-radius: 2px;
 }
 
 /* ----------------------------------INPUT FORM----------------------------- */
@@ -122,11 +124,19 @@
   height: 50px;
   padding: 20px;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: none;
-  border: 1px solid lightslategray;
+  border: 2px solid rgb(36, 36, 36);
   outline: none;
   margin: 10px;
+  border-radius: 10px;
+  background-color: inherit;
+  color: lightgray;
+}
+
+.sdf-form:active {
+  border: 2px solid #e41749;
 }
 
 .sdf-form-code {
@@ -136,10 +146,17 @@
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
-  border-radius: none;
-  border: 1px solid lightslategray;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid rgb(36, 36, 36);
   outline: none;
   margin: 10px;
+  background-color: rgb(10, 10, 10);
+  color: white;
+}
+
+.sdf-form-code:active {
+  border: 2px solid #e41749;
 }
 
 .sdf-form-search {
