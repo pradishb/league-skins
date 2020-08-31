@@ -1,4 +1,5 @@
 import React from "react";
+// import PropTypes from 'prop-types';
 
 function CharacterCard(props) {
   return (
@@ -6,10 +7,16 @@ function CharacterCard(props) {
       {/* img size is 250 x 295 */}
       <img src={props.img} alt="image" />
       <div className="cname">
-        <h3>{props.name}</h3>
+        <p className="sdf-h3">{props.name}</p>
       </div>
     </div>
   );
 }
+/*
+CharacterCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+*/
 
 export default CharacterCard;

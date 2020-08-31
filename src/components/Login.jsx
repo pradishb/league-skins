@@ -4,7 +4,12 @@ export default function Login() {
   return (
     <div className="login-container">
       <p>Please login to continue.</p>
-      <input type="text" name="form" placeholder="Name" className="sdf-form" />
+      <input
+        type="email"
+        name="form"
+        placeholder="Email"
+        className="sdf-form"
+      />
       <input
         type="password"
         name="form"

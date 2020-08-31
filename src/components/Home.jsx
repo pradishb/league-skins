@@ -2,16 +2,6 @@ import React from "react";
 import CharacterCard from "./CharacterCard";
 import characterdata from "../characterdata";
 
-function createEntry(characterInfo) {
-  return (
-    <CharacterCard
-      key={characterInfo.id}
-      img={characterInfo.img}
-      name={characterInfo.name}
-    />
-  );
-}
-
 export default function Home() {
   return (
     <div className="container">
@@ -41,7 +31,15 @@ export default function Home() {
           <button className="role-button">TANKS</button>
         </div>
       </div>
-      <div className="cards-container">{characterdata.map(createEntry)}</div>
+      <div className="cards-container">
+        {characterdata.map((characterInfo) => (
+          <CharacterCard
+            key={characterInfo.id}
+            img={characterInfo.img}
+            name={characterInfo.name}
+          />
+        ))}
+      </div>
     </div>
   );
 }
