@@ -19,11 +19,11 @@
 }
 
 .sdf-font {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 .sdf-title {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
   font-size: var(--font-title);
   font-weight: 900;
   font-style: italic;
@@ -292,7 +292,7 @@ a:hover {
 /* buttons */
 
 .role-button {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
   font-size: var(--font-h6);
   font-weight: 900;
   color: lightgray;
