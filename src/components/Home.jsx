@@ -21,6 +21,8 @@ export default function Home() {
       </div>
       <div className="title-container">
         <p className="sdf-title">CHOOSE YOUR CHAMPION</p>
+        <p>FIND TOP RATED SKINS IN THE MARKET</p>
+        <p>GIVE YOUR OWN RATING</p>
       </div>
       <div className="search-container">
         <input

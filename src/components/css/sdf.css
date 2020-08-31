@@ -79,8 +79,8 @@
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 900;
-  color: rgb(121, 121, 121);
-  background-color: white;
+  color: rgb(197, 197, 197);
+  background-color: inherit;
   border: none;
   outline: none;
   height: 41px;
@@ -150,7 +150,9 @@
   font-weight: bold;
   height: 30px;
   outline: none;
+  background-color: inherit;
+  color: white;
 
   border: none;
-  border-right: 1px solid lightgray;
+  border-right: 1px solid rgb(36, 36, 36);
 }
