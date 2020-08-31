@@ -6,7 +6,7 @@ function CharacterCard(props) {
       {/* img size is 250 x 295 */}
       <img src={props.img} alt="image" />
       <div className="cname">
-        <h2>{props.name}</h2>
+        <h3>{props.name}</h3>
       </div>
     </div>
   );

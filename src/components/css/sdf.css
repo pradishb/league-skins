@@ -62,15 +62,31 @@
 
 .sdf-s-submit {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 900;
-  font-style: italic;
   background-color: #e41749;
   color: white;
   border: none;
   outline: none;
-  height: 50px;
-  width: 150px;
+  height: 41px;
+  min-width: 129px;
+  max-width: 220px;
+  border-radius: 2px;
+  margin: 0px 5px;
+}
+
+.sdf-s-submit-minimal {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: rgb(121, 121, 121);
+  background-color: white;
+  border: none;
+  outline: none;
+  height: 41px;
+  min-width: 83px;
+  max-width: 83px;
+  margin: 0px 5px;
 }
 
 .sdf-m-submit {
@@ -127,13 +143,14 @@
 }
 
 .sdf-form-search {
-  padding: 10px;
-  min-width: 200px;
-  width: 300px;
+  min-width: 100px;
+  max-width: 200px;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
   outline: none;
-  background-color: whitesmoke;
+
   border: none;
+  border-right: 1px solid lightgray;
 }
