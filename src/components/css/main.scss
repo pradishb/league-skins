@@ -1,67 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-/* ---------------------------FONTS-------------------------- */
+$colors: (
+  primary: rgb(17, 17, 17),
+  secondary: rgb(27, 27, 27),
+  accent: #e41749,
+  border: rgb(36, 36, 36),
+);
 
-:root {
-  /* spacing, color, thickness */
-  --radius-small: 2px;
-  --radius-medium: 5px;
-  --radius-large: 10px;
+$fonts: (
+  title: 4.5rem,
+  h1: 3rem,
+  h2: 1.5rem,
+  h3: 1.17rem,
+  h4: 1.125rem,
+  h5: 0.875rem,
+  h6: 0.75rem,
+  form: 1rem,
+  bold: 900,
+  italic: italic,
+);
 
-  --font-title: 4.5rem;
-  --font-h1: 3rem;
-  --font-h2: 1.5rem;
-  --font-h3: 1.17rem;
-  --font-h4: 1.125rem;
-  --font-h5: 0.875rem;
-  --font-h6: 0.75rem;
-  --font-form: 1rem;
-}
+$radius: (
+  small: 2px,
+  medium: 5px,
+  large: 10px,
+);
 
-.sdf-font {
-  font-family: inherit;
-}
+$borders: (
+  medium: 2px solid map-get($colors, border),
+  small: 1px solid map-get($colors, border),
+);
 
+///////////////////////////////FONTS////////////////////////////////////////
 .sdf-title {
   font-family: inherit;
-  font-size: var(--font-title);
-  font-weight: 900;
-  font-style: italic;
+  font-size: map-get($fonts, title);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
 }
 
 .sdf-h1 {
   font-family: inherit;
-  font-size: var(--font-h1);
-  font-weight: 900;
-  font-style: italic;
+  font-size: map-get($fonts, h1);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
 }
 
 .sdf-h2 {
   font-family: inherit;
-  font-size: var(--font-h2);
-  font-weight: 900;
-  font-style: italic;
+  font-size: map-get($fonts, h2);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
 }
 
 .sdf-h3 {
   font-family: inherit;
-  font-size: var(--font-h3);
-  font-weight: 900;
-  font-style: italic;
+  font-size: map-get($fonts, h3);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
 }
 
 .sdf-h4 {
   font-family: inherit;
-  font-size: var(--font-h4);
-  font-weight: 900;
-  font-style: italic;
+  font-size: map-get($fonts, h4);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
 }
 
 .sdf-h5 {
   font-family: inherit;
-  font-size: var(--font-h5);
-  font-weight: 900;
-  font-style: italic;
+  font-size: map-get($fonts, h5);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
 }
 
 /* --------------------------LIGHT AND DARK------------------------------ */
@@ -76,31 +86,25 @@
 
 /* ---------------------------SUBMIT BUTTONS------------------------------- */
 
-.sdf-s-submit {
+.sdf-submit-s {
   font-family: inherit;
-  font-size: var(--font-h5);
-  font-weight: 900;
-  background-color: #e41749;
+  font-size: map-get($fonts, h5);
+  font-weight: map-get($fonts, bold);
+  background-color: map-get($colors, accent);
   color: white;
   border: none;
   outline: none;
   height: 41px;
   min-width: 129px;
   max-width: 220px;
-  border-radius: var(--radius-small);
+  border-radius: map-get($radius, small);
   margin: 0px 5px;
-
-  /*
-  &:sdf-minimal {
-    background-color: transparent;
-  }
-  */
 }
 
-.sdf-s-submit-minimal {
+.sdf-submit-s-minimal {
   font-family: inherit;
-  font-size: var(--font-h5);
-  font-weight: 900;
+  font-size: map-get($fonts, h5);
+  font-weight: map-get($fonts, bold);
   color: rgb(197, 197, 197);
   background-color: inherit;
   border: none;
@@ -111,33 +115,33 @@
   margin: 0px 5px;
 }
 
-.sdf-m-submit {
+.sdf-submit-m {
   font-family: inherit;
-  font-size: var(--font-h4);
-  font-weight: 900;
-  font-style: italic;
-  background-color: #e41749;
+  font-size: map-get($fonts, h4);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
+  background-color: map-get($colors, accent);
   color: white;
   border: none;
   outline: none;
   width: 300px;
   height: 68px;
   margin: 10px;
-  border-radius: var(--radius-large);
+  border-radius: map-get($radius, large);
 }
 
-.sdf-l-submit {
+.sdf-submit-l {
   font-family: inherit;
-  font-size: var(--font-h2);
-  font-weight: 900;
-  font-style: italic;
-  background-color: #e41749;
+  font-size: map-get($fonts, h2);
+  font-weight: map-get($fonts, bold);
+  font-style: map-get($fonts, italic);
+  background-color: map-get($colors, accent);
   color: white;
   border: none;
   outline: none;
   height: 68px;
   width: 358px;
-  border-radius: var(--radius-small);
+  border-radius: map-get($radius, small);
 }
 
 /* ----------------------------------INPUT FORM----------------------------- */
@@ -146,18 +150,18 @@
   height: 50px;
   padding: 20px;
   font-family: inherit;
-  font-size: var(--font-form);
+  font-size: map-get($fonts, form);
   font-weight: bold;
-  border: 2px solid rgb(36, 36, 36);
+  border: map-get($borders, medium);
   outline: none;
   margin: 10px;
-  border-radius: var(--radius-large);
+  border-radius: map-get($radius, large);
   background-color: inherit;
   color: lightgray;
-}
 
-.sdf-form:active {
-  border: 2px solid #e41749;
+  &:active {
+    border: 2px solid map-get($colors, accent);
+  }
 }
 
 .sdf-form-code {
@@ -166,25 +170,25 @@
   padding: 10px;
   text-align: center;
   font-family: inherit;
-  font-size: var(--font-h2);
+  font-size: map-get($fonts, h2);
   font-weight: bold;
-  border-radius: var(--radius-large);
-  border: 2px solid rgb(36, 36, 36);
+  border-radius: map-get($radius, large);
+  border: map-get($borders, medium);
   outline: none;
   margin: 10px;
   background-color: rgb(10, 10, 10);
   color: white;
-}
 
-.sdf-form-code:active {
-  border: 2px solid #e41749;
+  &:active {
+    border: 2px solid map-get($colors, accent);
+  }
 }
 
 .sdf-form-search {
   min-width: 100px;
   max-width: 200px;
   font-family: inherit;
-  font-size: var(--font-h6);
+  font-size: map-get($fonts, h6);
   font-weight: bold;
   height: 30px;
   outline: none;
@@ -192,7 +196,7 @@
   color: white;
 
   border: none;
-  border-right: 1px solid rgb(36, 36, 36);
+  border-right: 1px solid map-get($colors, border);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -206,7 +210,7 @@
 }
 
 body {
-  background-color: rgb(17, 17, 17);
+  background-color: map-get($colors, primary);
   color: white;
 }
 /* ------------------------------Link------------------------ */
@@ -215,10 +219,10 @@ a {
   color: #9e9e9e;
   width: fit-content;
   padding: 5px;
-}
 
-a:hover {
-  color: #e41749;
+  &:hover {
+    color: map-get($colors, accent);
+  }
 }
 
 /* ----------------------------Login Container------------------ */
@@ -230,31 +234,30 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  p {
+    padding: 20px;
+    margin: 10px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    height: 68px;
+    margin: 5px;
+    font-size: map-get($fonts, h5);
+  }
+
+  .code-bar {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+  }
 }
 
-.login-container > p {
-  padding: 20px;
-  margin: 10px;
-}
-
-.login-container > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 300px;
-  height: 68px;
-  margin: 5px;
-  font-size: var(--font-h5);
-}
-/* ------------------------------------Codebar input------------------------------------- */
-.login-container > .code-bar {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: auto;
-}
-
-/* ----------------------------------------------HOME---------------------------------------------------------------- */
+/* --------------------------HOME------------------------------------- */
 
 .container {
   display: flex;
@@ -280,35 +283,33 @@ a:hover {
   width: 100%;
   padding: 0px 22px;
   margin: 20px 90px;
-  border: 1px solid rgb(36, 36, 36);
+  border: 1px solid map-get($colors, border);
   height: 50px;
-  border-radius: var(--radius-large);
+  border-radius: map-get($radius, large);
 }
 
 .role-button-container {
   padding: 10px;
+
+  .role-button {
+    font-family: inherit;
+    font-size: map-get($fonts, h6);
+    font-weight: map-get($fonts, bold);
+    color: lightgray;
+    background-color: inherit;
+
+    border: none;
+    outline: none;
+
+    margin: 0px 10px;
+
+    &:hover {
+      color: map-get($colors, accent);
+    }
+  }
 }
 
-/* buttons */
-
-.role-button {
-  font-family: inherit;
-  font-size: var(--font-h6);
-  font-weight: 900;
-  color: lightgray;
-  background-color: inherit;
-
-  border: none;
-  outline: none;
-
-  margin: 0px 10px;
-}
-
-.role-button:hover {
-  color: #e41749;
-}
-
-/* --------------------------------------------CARDS----------------------------- */
+/* --------------------------CARDS----------------------------- */
 
 .cards-container {
   display: flex;
@@ -316,35 +317,35 @@ a:hover {
   margin: 20px 100px;
   width: 100%;
   justify-content: space-between;
+
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 348px;
+    background: map-get($colors, secondary);
+    border: none;
+    margin: 10px 0px;
+    border-radius: map-get($radius, large);
+    overflow: hidden;
+
+    &:hover {
+      border: 2px solid map-get($colors, accent);
+    }
+
+    .cname {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 8px 20px;
+      font-style: map-get($fonts, italic);
+      color: white;
+      background-color: map-get($colors, secondary);
+    }
+  }
 }
 
-.card {
-  display: flex;
-  flex-wrap: wrap;
-  width: 250px;
-  height: 348px;
-  background: rgb(27, 27, 27);
-  border: none;
-  margin: 10px 0px;
-  border-radius: var(--radius-large);
-  overflow: hidden;
-}
-
-.cname {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 8px 20px;
-  font-style: italic;
-  color: white;
-  background-color: rgb(27, 27, 27);
-}
-
-.card:hover {
-  border: 2px solid #e41749;
-}
-
-/* ------------------------------------------------Top-rating--page-------------------- */
+/* -------------------------------Top-rating--page-------------------- */
 
 .top-rating-container {
   display: flex;
@@ -373,7 +374,7 @@ a:hover {
   overflow: scroll;
 }
 
-/* -------------------------------------Sidebar-Scrollbar-------------------- */
+/* ---------------Sidebar-Scrollbar-------------------- */
 
 .sp-card-container::-webkit-scrollbar {
   width: 4px;
@@ -386,9 +387,9 @@ a:hover {
 
 /* Handle on hover */
 .sp-card-container::-webkit-scrollbar-thumb:hover {
-  background: #e41749;
+  background: map-get($colors, accent);
 }
-/* ------------------------------------------Sidepanel Card----------------------------- */
+/* --------------Sidepanel Card----------------------------- */
 .sp-card {
   display: flex;
   width: auto;

@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="container">
       <div className="navbar">
-        <button className="sdf-s-submit-minimal">LOGIN</button>
-        <button className="sdf-s-submit">SIGN UP</button>
+        <button className="sdf-submit-s-minimal">LOGIN</button>
+        <button className="sdf-submit-s">SIGN UP</button>
       </div>
       <div className="title-container">
         <p className="sdf-title">CHOOSE YOUR CHAMPION</p>

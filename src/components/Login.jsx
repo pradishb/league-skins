@@ -22,7 +22,7 @@ export default function Login() {
         placeholder="Confirm Password"
         className="sdf-form"
       />
-      <button className="sdf-m-submit"> LOGIN </button>
+      <button className="sdf-submit-m"> LOGIN </button>
       <div>
         <a href="#">Forgot password?</a>
         <a href="#">Not registered?</a>
