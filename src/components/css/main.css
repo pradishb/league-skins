@@ -314,6 +314,8 @@ a:hover {
   cursor: pointer;
 }
 .cards-container .card img {
+  width: 180px;
+  height: 250px;
   object-fit: cover;
 }
 .cards-container .card .cname {
@@ -335,9 +337,14 @@ a:hover {
   height: 250px;
   background-color: transparent;
   border-radius: inherit;
+  box-shadow: inset 0px -200px 300px -58px rgba(255, 255, 255, 0.151);
+  opacity: 0%;
+  transition: opacity 0.8s ease-out;
 }
 .cards-container .card .card-glow:hover {
   box-shadow: inset 0px -200px 300px -58px rgba(255, 255, 255, 0.151);
+  opacity: 100%;
+  transition: opacity 0.5s ease-out;
 }
 
 /* -------------------------------Top-rating--page-------------------- */
