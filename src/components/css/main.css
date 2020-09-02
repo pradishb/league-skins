@@ -378,22 +378,19 @@ a:hover {
 
 .sp-card-container {
   overflow: scroll;
+  margin: 0 4px 0 0;
 }
 
 /* ---------------Sidebar-Scrollbar-------------------- */
 .sp-card-container::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
   height: 0;
 }
 
 /* Handle */
 .sp-card-container::-webkit-scrollbar-thumb {
-  background: #757575;
-}
-
-/* Handle on hover */
-.sp-card-container::-webkit-scrollbar-thumb:hover {
   background: #e41749;
+  border-radius: 4px;
 }
 
 /* --------------Sidepanel Card----------------------------- */
@@ -401,14 +398,14 @@ a:hover {
   display: flex;
   width: auto;
   height: 100px;
-  margin: 20px 40px;
+  margin: 20px 31px 20px 40px;
   background-color: rgba(0, 0, 0, 0.637);
   cursor: pointer;
   border-radius: 10px;
   overflow: hidden;
 }
 .sp-card:hover {
-  box-shadow: inset 10px 10px 300px -10px rgba(255, 255, 255, 0.151);
+  box-shadow: inset 10px 10px 300px -10px rgba(255, 255, 255, 0.349);
 }
 .sp-card img {
   height: 100px;
