@@ -26,6 +26,7 @@ $radius: (
   small: 2px,
   medium: 5px,
   large: 10px,
+  extra-large: 20px,
 );
 
 $borders: (
@@ -220,8 +221,8 @@ $borders: (
 }
 
 .sdf-form-search {
-  min-width: 100px;
-  max-width: 200px;
+  min-width: 190px;
+  max-width: 190px;
   font-family: inherit;
   font-size: map-get($fonts, h6);
   font-weight: bold;
@@ -229,9 +230,10 @@ $borders: (
   outline: none;
   background-color: inherit;
   color: white;
+  padding: 0 20px;
 
   border: none;
-  border-right: 1px solid map-get($colors, border);
+  border-right: 2px solid map-get($colors, border);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -326,9 +328,9 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0px 22px;
+  padding: 0px 20px;
   margin: 20px 90px;
-  border: 1px solid map-get($colors, border);
+  border: map-get($borders, medium);
   height: 50px;
   border-radius: map-get($radius, large);
 }
@@ -388,7 +390,6 @@ a {
       align-items: center;
       width: 180px;
       padding: 100px 20px 10px 20px;
-      font-style: map-get($fonts, italic);
       color: white;
       background-color: transparent;
       box-shadow: inset 0px -79px 67px -40px black;
@@ -400,7 +401,6 @@ a {
       width: 180px;
       height: 250px;
       background-color: transparent;
-
       border-radius: inherit;
 
       &:hover {
@@ -412,19 +412,32 @@ a {
 
 /* -------------------------------Top-rating--page-------------------- */
 
+.top-rating-background {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eceff1;
+  //texture-background-image
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  justify-content: center;
+  align-items: center;
+}
+
 .top-rating-container {
   display: flex;
   background-image: url("../image/img.jpg");
-  margin: 100px 150px 20px 150px;
-  width: 100%;
-  height: 800px;
+  width: 70vw;
+  height: 700px;
+  border-radius: map-get($radius, extra-large);
+  overflow: hidden;
 }
 
 .sp-container {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 800px;
+  width: 380px;
+  height: 700px;
   background: rgba(0, 0, 0, 0.425);
   backdrop-filter: blur(5px);
 }
@@ -436,7 +449,6 @@ a {
 }
 
 .sp-card-container {
-  padding: 20px;
   overflow: scroll;
 }
 
@@ -444,6 +456,7 @@ a {
 
 .sp-card-container::-webkit-scrollbar {
   width: 4px;
+  height: 0;
 }
 
 /* Handle */
@@ -460,14 +473,14 @@ a {
   display: flex;
   width: auto;
   height: 100px;
-  margin: 20px;
+  margin: 20px 40px;
   background-color: rgba(0, 0, 0, 0.637);
   cursor: pointer;
   border-radius: map-get($radius, large);
   overflow: hidden;
 
   &:hover {
-    border: map-get($borders, medium-hover);
+    box-shadow: inset 10px 10px 300px -10px rgba(255, 255, 255, 0.151);
   }
 
   img {

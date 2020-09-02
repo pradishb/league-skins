@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import characterdata from "../characterdata";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <p>GIVE YOUR OWN RATING</p>
       </div>
       <div className="search-container">
+        <FontAwesomeIcon icon="search" color="grey" />
         <input
           type="text"
           placeholder="Search.."

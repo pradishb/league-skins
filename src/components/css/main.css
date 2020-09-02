@@ -173,8 +173,8 @@
 }
 
 .sdf-form-search {
-  min-width: 100px;
-  max-width: 200px;
+  min-width: 190px;
+  max-width: 190px;
   font-family: inherit;
   font-size: 0.75rem;
   font-weight: bold;
@@ -182,8 +182,9 @@
   outline: none;
   background-color: inherit;
   color: white;
+  padding: 0 20px;
   border: none;
-  border-right: 1px solid #242424;
+  border-right: 2px solid #242424;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -265,9 +266,9 @@ a:hover {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0px 22px;
+  padding: 0px 20px;
   margin: 20px 90px;
-  border: 1px solid #242424;
+  border: 2px solid #242424;
   height: 50px;
   border-radius: 10px;
 }
@@ -323,7 +324,6 @@ a:hover {
   align-items: center;
   width: 180px;
   padding: 100px 20px 10px 20px;
-  font-style: italic;
   color: white;
   background-color: transparent;
   box-shadow: inset 0px -79px 67px -40px black;
@@ -341,19 +341,31 @@ a:hover {
 }
 
 /* -------------------------------Top-rating--page-------------------- */
+.top-rating-background {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eceff1;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  justify-content: center;
+  align-items: center;
+}
+
 .top-rating-container {
   display: flex;
   background-image: url("../image/img.jpg");
-  margin: 100px 150px 20px 150px;
-  width: 100%;
-  height: 800px;
+  width: 70vw;
+  height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .sp-container {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 800px;
+  width: 380px;
+  height: 700px;
   background: rgba(0, 0, 0, 0.425);
   backdrop-filter: blur(5px);
 }
@@ -365,13 +377,13 @@ a:hover {
 }
 
 .sp-card-container {
-  padding: 20px;
   overflow: scroll;
 }
 
 /* ---------------Sidebar-Scrollbar-------------------- */
 .sp-card-container::-webkit-scrollbar {
   width: 4px;
+  height: 0;
 }
 
 /* Handle */
@@ -389,14 +401,14 @@ a:hover {
   display: flex;
   width: auto;
   height: 100px;
-  margin: 20px;
+  margin: 20px 40px;
   background-color: rgba(0, 0, 0, 0.637);
   cursor: pointer;
   border-radius: 10px;
   overflow: hidden;
 }
 .sp-card:hover {
-  border: 2px solid #e41749;
+  box-shadow: inset 10px 10px 300px -10px rgba(255, 255, 255, 0.151);
 }
 .sp-card img {
   height: 100px;
