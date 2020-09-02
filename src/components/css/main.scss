@@ -349,13 +349,10 @@ a {
     margin: 0px 10px;
     cursor: pointer;
     padding: 16px 0;
-    box-shadow: none;
-    transition: box-shadow 0.4s ease-out, color 0.5s;
 
     &:hover {
       color: white;
       box-shadow: 0 2px 0px 0px map-get($colors, accent);
-      transition: box-shadow 0.1s ease-out, color 0.5s;
     }
   }
 }
