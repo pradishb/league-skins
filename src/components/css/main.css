@@ -64,6 +64,13 @@
   max-width: 220px;
   border-radius: 2px;
   margin: 0px 5px;
+  cursor: pointer;
+}
+.sdf-submit-s:hover {
+  background-color: #f3426f;
+}
+.sdf-submit-s:active {
+  background-color: #ff6b90;
 }
 
 .sdf-submit-s-minimal {
@@ -78,6 +85,10 @@
   min-width: 83px;
   max-width: 83px;
   margin: 0px 5px;
+  cursor: pointer;
+}
+.sdf-submit-s-minimal:hover {
+  color: white;
 }
 
 .sdf-submit-m {
@@ -93,6 +104,13 @@
   height: 68px;
   margin: 10px;
   border-radius: 10px;
+  cursor: pointer;
+}
+.sdf-submit-m:hover {
+  background-color: #f3426f;
+}
+.sdf-submit-m:active {
+  background-color: #ff6b90;
 }
 
 .sdf-submit-l {
@@ -107,6 +125,13 @@
   height: 68px;
   width: 358px;
   border-radius: 2px;
+  cursor: pointer;
+}
+.sdf-submit-l:hover {
+  background-color: #f3426f;
+}
+.sdf-submit-l:active {
+  background-color: #ff6b90;
 }
 
 /* ----------------------------------INPUT FORM----------------------------- */
@@ -171,7 +196,9 @@
 }
 
 body {
-  background-color: #111111;
+  background: #111111;
+  /* fallback for old browsers */
+  background: linear-gradient(to top, #1b1b1b, #181818, #111111);
   color: white;
 }
 
@@ -257,9 +284,12 @@ a:hover {
   border: none;
   outline: none;
   margin: 0px 10px;
+  cursor: pointer;
+  padding: 16px 0;
 }
 .role-button-container .role-button:hover {
-  color: #e41749;
+  color: white;
+  box-shadow: 0 2px 0px #e41749;
 }
 
 /* --------------------------CARDS----------------------------- */
@@ -273,25 +303,41 @@ a:hover {
 .cards-container .card {
   display: flex;
   flex-wrap: wrap;
-  width: 250px;
-  height: 348px;
+  width: 180px;
+  height: 250px;
   background: #1b1b1b;
   border: none;
-  margin: 10px 0px;
+  margin: 20px 10px;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
-.cards-container .card:hover {
-  border: 2px solid #e41749;
+.cards-container .card img {
+  object-fit: cover;
 }
 .cards-container .card .cname {
   display: flex;
+  position: absolute;
+  justify-content: center;
+  align-self: flex-end;
   align-items: center;
-  width: 100%;
-  padding: 8px 20px;
+  width: 180px;
+  padding: 100px 20px 10px 20px;
   font-style: italic;
   color: white;
-  background-color: #1b1b1b;
+  background-color: transparent;
+  box-shadow: inset 0px -79px 67px -40px black;
+  border-radius: inherit;
+}
+.cards-container .card .card-glow {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  background-color: transparent;
+  border-radius: inherit;
+}
+.cards-container .card .card-glow:hover {
+  box-shadow: inset 0px -200px 300px -58px rgba(255, 255, 255, 0.151);
 }
 
 /* -------------------------------Top-rating--page-------------------- */
@@ -308,13 +354,14 @@ a:hover {
   flex-direction: column;
   width: 400px;
   height: 800px;
-  background: rgba(0, 0, 0, 0.637);
+  background: rgba(0, 0, 0, 0.425);
+  backdrop-filter: blur(5px);
 }
 
 .sp-title {
   padding: 20px 20px;
   margin: 40px 40px 0 40px;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.322);
+  border-bottom: 2px solid #242424;
 }
 
 .sp-card-container {
@@ -343,13 +390,18 @@ a:hover {
   width: auto;
   height: 100px;
   margin: 20px;
-  background-color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(0, 0, 0, 0.637);
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.pp1 {
-  background-image: url("../image/profile.jpg");
+.sp-card:hover {
+  border: 2px solid #e41749;
+}
+.sp-card img {
   height: 100px;
   width: 100px;
+  object-fit: cover;
 }
 
 .sp-card-rating {

@@ -5,6 +5,8 @@ $colors: (
   secondary: rgb(27, 27, 27),
   accent: #e41749,
   border: rgb(36, 36, 36),
+  button-hover: #f3426f,
+  button-active: #ff6b90,
 );
 
 $fonts: (
@@ -29,6 +31,7 @@ $radius: (
 $borders: (
   medium: 2px solid map-get($colors, border),
   small: 1px solid map-get($colors, border),
+  medium-hover: 2px solid map-get($colors, accent),
 );
 
 ///////////////////////////////FONTS////////////////////////////////////////
@@ -99,6 +102,15 @@ $borders: (
   max-width: 220px;
   border-radius: map-get($radius, small);
   margin: 0px 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: map-get($colors, button-hover);
+  }
+
+  &:active {
+    background-color: map-get($colors, button-active);
+  }
 }
 
 .sdf-submit-s-minimal {
@@ -113,6 +125,11 @@ $borders: (
   min-width: 83px;
   max-width: 83px;
   margin: 0px 5px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .sdf-submit-m {
@@ -128,6 +145,15 @@ $borders: (
   height: 68px;
   margin: 10px;
   border-radius: map-get($radius, large);
+  cursor: pointer;
+
+  &:hover {
+    background-color: map-get($colors, button-hover);
+  }
+
+  &:active {
+    background-color: map-get($colors, button-active);
+  }
 }
 
 .sdf-submit-l {
@@ -142,6 +168,15 @@ $borders: (
   height: 68px;
   width: 358px;
   border-radius: map-get($radius, small);
+  cursor: pointer;
+
+  &:hover {
+    background-color: map-get($colors, button-hover);
+  }
+
+  &:active {
+    background-color: map-get($colors, button-active);
+  }
 }
 
 /* ----------------------------------INPUT FORM----------------------------- */
@@ -210,7 +245,17 @@ $borders: (
 }
 
 body {
-  background-color: map-get($colors, primary);
+  background: map-get($colors, primary); /* fallback for old browsers */
+
+  background: linear-gradient(
+    to top,
+    map-get($colors, secondary),
+    #181818,
+    map-get($colors, primary)
+  );
+
+  // background-color: map-get($colors, primary);
+
   color: white;
 }
 /* ------------------------------Link------------------------ */
@@ -297,14 +342,15 @@ a {
     font-weight: map-get($fonts, bold);
     color: lightgray;
     background-color: inherit;
-
     border: none;
     outline: none;
-
     margin: 0px 10px;
+    cursor: pointer;
+    padding: 16px 0;
 
     &:hover {
-      color: map-get($colors, accent);
+      color: white;
+      box-shadow: 0 2px 0px map-get($colors, accent);
     }
   }
 }
@@ -321,26 +367,45 @@ a {
   .card {
     display: flex;
     flex-wrap: wrap;
-    width: 250px;
-    height: 348px;
+    width: 180px;
+    height: 250px;
     background: map-get($colors, secondary);
     border: none;
-    margin: 10px 0px;
+    margin: 20px 10px;
     border-radius: map-get($radius, large);
     overflow: hidden;
+    cursor: pointer;
 
-    &:hover {
-      border: 2px solid map-get($colors, accent);
+    img {
+      object-fit: cover;
     }
 
     .cname {
       display: flex;
+      position: absolute;
+      justify-content: center;
+      align-self: flex-end;
       align-items: center;
-      width: 100%;
-      padding: 8px 20px;
+      width: 180px;
+      padding: 100px 20px 10px 20px;
       font-style: map-get($fonts, italic);
       color: white;
-      background-color: map-get($colors, secondary);
+      background-color: transparent;
+      box-shadow: inset 0px -79px 67px -40px black;
+      border-radius: inherit;
+    }
+
+    .card-glow {
+      position: absolute;
+      width: 180px;
+      height: 250px;
+      background-color: transparent;
+
+      border-radius: inherit;
+
+      &:hover {
+        box-shadow: inset 0px -200px 300px -58px rgba(255, 255, 255, 0.151);
+      }
     }
   }
 }
@@ -360,13 +425,14 @@ a {
   flex-direction: column;
   width: 400px;
   height: 800px;
-  background: rgba(0, 0, 0, 0.637);
+  background: rgba(0, 0, 0, 0.425);
+  backdrop-filter: blur(5px);
 }
 
 .sp-title {
   padding: 20px 20px;
   margin: 40px 40px 0 40px;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.322);
+  border-bottom: map-get($borders, medium);
 }
 
 .sp-card-container {
@@ -395,13 +461,20 @@ a {
   width: auto;
   height: 100px;
   margin: 20px;
-  background-color: rgba(0, 0, 0, 0.548);
-}
+  background-color: rgba(0, 0, 0, 0.637);
+  cursor: pointer;
+  border-radius: map-get($radius, large);
+  overflow: hidden;
 
-.pp1 {
-  background-image: url("../image/profile.jpg");
-  height: 100px;
-  width: 100px;
+  &:hover {
+    border: map-get($borders, medium-hover);
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
 }
 
 .sp-card-rating {

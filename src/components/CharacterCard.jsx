@@ -9,6 +9,7 @@ function CharacterCard(props) {
       <div className="cname">
         <p className="sdf-h3">{props.name}</p>
       </div>
+      <div className="card-glow"></div>
     </div>
   );
 }
