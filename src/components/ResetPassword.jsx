@@ -17,7 +17,7 @@ export default function ResetPassword() {
         placeholder="Confirm Password"
         className="sdf-form"
       />
-      <button className="sdf-m-submit"> CONFIRM </button>
+      <button className="sdf-submit-m"> CONFIRM </button>
     </div>
   );
 }

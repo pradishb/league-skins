@@ -17,7 +17,7 @@ export default function Signup() {
         placeholder="Confirm Password"
         className="sdf-form"
       />
-      <button className="sdf-m-submit"> SIGN UP </button>
+      <button className="sdf-submit-m"> SIGN UP </button>
       <div>
         <a href="#">Already a member?</a>
       </div>

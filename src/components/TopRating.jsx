@@ -1,132 +1,27 @@
-import React, { Profiler } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import SpCard from "./SpCard";
+import ratingdata from "./jason_data/ratingdata";
 
 export default function TopRating() {
   return (
-    <div className="container">
+    /*top-rating-background is a container but is used for
+    background texture image: this container contains all
+    the elements of TopRating page*/
+
+    <div className="top-rating-background">
       <div className="top-rating-container">
         <div className="sp-container">
           <div className="sp-title">
             <p className="sdf-h1 dark">TOP RATED SKINS</p>
           </div>
           <div className="sp-card-container">
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
-            <div className="sp-card">
-              <div className="pp1" />
-              <div className="sp-card-rating">
-                <div className="sdf-h5 dark">OVERALL RATINGS</div>
-                <div className="rating">
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star" color="white" />
-                  <FontAwesomeIcon icon="star-half" color="white" />
-                </div>
-              </div>
-            </div>
+            {ratingdata.map((ratingInfo) => (
+              <SpCard
+                key={ratingInfo.id}
+                name={ratingInfo.name}
+                img={ratingInfo.img}
+              />
+            ))}
           </div>
           <div></div>
         </div>
