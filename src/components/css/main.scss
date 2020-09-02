@@ -349,10 +349,13 @@ a {
     margin: 0px 10px;
     cursor: pointer;
     padding: 16px 0;
+    box-shadow: none;
+    transition: box-shadow 0.4s ease-out, color 0.5s;
 
     &:hover {
       color: white;
-      box-shadow: 0 2px 0px map-get($colors, accent);
+      box-shadow: 0 2px 0px 0px map-get($colors, accent);
+      transition: box-shadow 0.1s ease-out, color 0.5s;
     }
   }
 }
@@ -487,9 +490,12 @@ a {
   cursor: pointer;
   border-radius: map-get($radius, large);
   overflow: hidden;
+  box-shadow: none;
+  transition: box-shadow 0.1s ease-out;
 
   &:hover {
     box-shadow: inset 10px 10px 300px -10px rgba(255, 255, 255, 0.349);
+    transition: box-shadow 0.03s ease-out;
   }
 
   img {
