@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import CharacterCard from "./CharacterCard";
 import characterdata from "../characterdata";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
+
+  const Characters = characterdata.filter((data) => {
+    return data.name.toLowerCase().includes(search.toLowerCase());
+  });
+
   return (
     <div className="container">
       <div className="navbar">
@@ -22,6 +28,7 @@ export default function Home() {
           placeholder="Search.."
           name="searchbar"
           className="sdf-form-search"
+          onChange={(e) => setSearch(e.target.value)}
         />
         <div className="role-button-container">
           <button className="role-button">ALL</button>
@@ -34,7 +41,7 @@ export default function Home() {
         </div>
       </div>
       <div className="cards-container">
-        {characterdata.map((characterInfo) => (
+        {Characters.map((characterInfo) => (
           <CharacterCard
             key={characterInfo.id}
             img={characterInfo.img}
