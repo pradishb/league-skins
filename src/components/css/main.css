@@ -299,7 +299,6 @@ a:hover {
   flex-wrap: wrap;
   margin: 20px 100px;
   width: 100%;
-  justify-content: space-between;
 }
 .cards-container .card {
   display: flex;
@@ -308,7 +307,7 @@ a:hover {
   height: 250px;
   background: #1b1b1b;
   border: none;
-  margin: 20px 10px;
+  margin: 19.93px 19.93px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
