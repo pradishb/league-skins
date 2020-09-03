@@ -428,9 +428,7 @@ a {
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
-  background-color: #eceff1;
-  //texture-background-image
-  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  background-color: map-get($colors, secondary);
   justify-content: center;
   align-items: center;
 }
@@ -512,7 +510,6 @@ a {
   padding: 20px;
 }
 
-.sp-card-rating > .rating {
-  padding: 10px 0;
-  width: auto;
+.rating-star {
+  outline: none;
 }

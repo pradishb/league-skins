@@ -356,8 +356,7 @@ a:hover {
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
-  background-color: #eceff1;
-  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  background-color: #1b1b1b;
   justify-content: center;
   align-items: center;
 }
@@ -432,9 +431,8 @@ a:hover {
   padding: 20px;
 }
 
-.sp-card-rating > .rating {
-  padding: 10px 0;
-  width: auto;
+.rating-star {
+  outline: none;
 }
 
 /*# sourceMappingURL=main.css.map */
