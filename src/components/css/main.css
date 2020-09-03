@@ -288,6 +288,10 @@ a:hover {
   cursor: pointer;
   padding: 16px 0;
 }
+.role-button-container .role-button.active {
+  color: white;
+  box-shadow: 0 2px 0px 0px #e41749;
+}
 .role-button-container .role-button:hover {
   color: white;
   box-shadow: 0 2px 0px 0px #e41749;

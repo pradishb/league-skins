@@ -350,6 +350,11 @@ a {
     cursor: pointer;
     padding: 16px 0;
 
+    &.active {
+      color: white;
+      box-shadow: 0 2px 0px 0px map-get($colors, accent);
+    }
+
     &:hover {
       color: white;
       box-shadow: 0 2px 0px 0px map-get($colors, accent);

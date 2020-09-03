@@ -1,19 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import CharacterCard from "./CharacterCard";
 import characterdata from "../characterdata";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+console.log(characterdata);
+
+//joins and filters
+function cs(...args) {
+  console.log(args);
+  return args
+    .filter(
+      (arg) => arg !== undefined && arg !== null && arg !== "" && arg !== false
+    )
+    .join(" ");
+}
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [filteredCards, setFilteredCards] = useState([]);
+  const [category, setCategory] = useState("");
 
-  useEffect(() => {
-    setFilteredCards(
-      characterdata.filter((data) =>
+  function handleClick(e) {
+    const value = e.target.value;
+    setCategory(value);
+  }
+
+  const filteredCards = useMemo(() => {
+    let cards = characterdata;
+    if (search) {
+      cards = cards.filter((data) =>
         data.name.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [search, characterdata]);
+      );
+    }
+    if (category) {
+      cards = cards.filter((card) => card.role.toLowerCase() === category);
+    }
+    return cards;
+  }, [search, category]);
 
   return (
     <div className="container">
@@ -36,18 +57,61 @@ export default function Home() {
           onChange={(e) => setSearch(e.target.value)}
         />
         <div className="role-button-container">
-          <button className="role-button">ALL</button>
-          <button className="role-button">ASSASINS</button>
-          <button className="role-button">FIGHTERS</button>
-          <button className="role-button">MAGES</button>
-          <button className="role-button">MARKSMEN</button>
-          <button className="role-button">SUPPORTS</button>
-          <button className="role-button">TANKS</button>
+          <button
+            className={cs("role-button", category === "" && "active")}
+            onClick={handleClick}
+            value=""
+          >
+            ALL
+          </button>
+          <button
+            className={cs("role-button", category === "assasin" && "active")}
+            onClick={handleClick}
+            value="assasin"
+          >
+            ASSASINS
+          </button>
+          <button
+            className={cs("role-button", category === "fighter" && "active")}
+            onClick={handleClick}
+            value="fighter"
+          >
+            FIGHTERS
+          </button>
+          <button
+            className={cs("role-button", category === "mage" && "active")}
+            onClick={handleClick}
+            value="mage"
+          >
+            MAGES
+          </button>
+          <button
+            className={cs("role-button", category === "marksman" && "active")}
+            onClick={handleClick}
+            value="marksman"
+          >
+            MARKSMEN
+          </button>
+          <button
+            className={cs("role-button", category === "support" && "active")}
+            onClick={handleClick}
+            value="support"
+          >
+            SUPPORTS
+          </button>
+          <button
+            className={cs("role-button", category === "tank" && "active")}
+            onClick={handleClick}
+            value="tank"
+          >
+            TANKS
+          </button>
         </div>
       </div>
       <div className="cards-container">
         {filteredCards.map((characterInfo) => (
           <CharacterCard
+            role={characterInfo.role}
             key={characterInfo.id}
             img={characterInfo.img}
             name={characterInfo.name}
