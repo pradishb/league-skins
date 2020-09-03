@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CharacterCard from "./CharacterCard";
 import characterdata from "../characterdata";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   const [search, setSearch] = useState("");
+  const [filteredCards, setFilteredCards] = useState([]);
 
-  const Characters = characterdata.filter((data) => {
-    return data.name.toLowerCase().includes(search.toLowerCase());
-  });
+  useEffect(() => {
+    setFilteredCards(
+      characterdata.filter((data) =>
+        data.name.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, characterdata]);
 
   return (
     <div className="container">
@@ -41,7 +46,7 @@ export default function Home() {
         </div>
       </div>
       <div className="cards-container">
-        {Characters.map((characterInfo) => (
+        {filteredCards.map((characterInfo) => (
           <CharacterCard
             key={characterInfo.id}
             img={characterInfo.img}
